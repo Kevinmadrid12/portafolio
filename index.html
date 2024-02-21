@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoPulse News</title>
+    <!-- Font-awesome Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS Library-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate CSS Library -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Estilo CSS Propio -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/images-removebg-preview.png">
+            <div class="icono-menu" id="menu-mobile">
+                <i class="fa-solid fa-bars" id="icono-hamburguesa"></i>
+            </div>
+        </div>
+        <div class="container-nav" id="menu-movimiento">
+            <nav class="menu-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="vistas/Nosotros.html">Nosotros</a></li>
+                    <li><a href="vistas/Noticias.html">Noticias</a></li>
+                    <li><a href="vistas/contactanos.html">Contactanos</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <nav class="menu-social">
+                    <ul>
+                        <li><a href="https://www.facebook.com/?locale=es_LA"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=es"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>TechnoPulse News <span>noticiero</span></h1>
+    </div>
+
+    <section class="background-section-1">
+        <h2 class="title-secundary">Tu noticiero de <span class="noticias">confianza</span></h2>
+        <div class="first-box">
+            <img data-aos="fade-right" src="img/cuantico.jpg" alt="">
+            <div>
+            <h4 class="animate__animated animate__pulse animate__delay-2s ">El avance cuántico que podría revolucionar la computación</h4>
+            <p>Los científicos han dado un paso más hacia la fabricación de ordenadores "cuánticos" multitarea, más potentes que los superordenadores más avanzados de la actualidad. </p>
+            <p>Los ordenadores cuánticos aprovechan las extrañas cualidades de las partículas subatómicas.</p>
+            <p> Las llamadas partículas cuánticas pueden estar en dos lugares al mismo tiempo y también extrañamente conectadas, aunque las separen millones de kilómetros.</p>
+            <p>Un equipo de la Universidad de Sussex transfirió información cuántica entre chips de ordenador a una velocidad y con una precisión récord.</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="background-section-2">
+        <h2 class="title-secundary">Tu noticiero de <span class="noticias">confianza</span></h2>
+        <div class="first-box">
+            <img  class="img-mobile"  data-aos="fade-left" src="img/colisionador.png" alt="">
+            <div>
+            <h4 class="animate__animated animate__pulse animate__delay-2s">Qué es el Futuro Colisionador Circular, el acelerador de partículas que promete ser 3 veces más grande que el actual y revolucionar la física</h4>
+            <p>Sobre el papel parece fascinante. Un nuevo supercolisionador de átomos para tratar de comprender mejor cómo es que funciona el universo.</p>
+            <p>En la práctica son muchos los interrogantes que rodean a la propuesta de los científicos que trabajan en el Gran Colisionador de Hadrones (GCH) para construir una máquina tres veces más grande que la actual: el Futuro Colisionador Circular (FCC).</p>
+            <p>Mientras unos confían en poder descubrir nuevas partículas que podrían revolucionar la física, otros cuestionan los US$15.000 millones que se requieren para la primera fase de su construcción.</p>
+        </div>
+            <img class="img-desktop" data-aos="fade-left" src="img/colisionador.png" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo logo-mobile">
+            <img src="img/images-removebg-preview.png" alt="">
+        </div>
+        <div class="info">
+            <h4>World Machine</h4>
+            <h4>San Salvador, El Salvador C.A</h4>
+            <h4>info-worldmachine@gmail.com</h4>
+        </div>
+        <div class="social-media">
+            <nav class="menu-social">
+                <ul>
+                    <li><a href="https://www.facebook.com/?locale=es_LA"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=es"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!--AOS Library-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    
+    const menu = document.getElementById('menu-mobile');
+    const movimiento = document.getElementById('menu-movimiento');
+    const icono = document.getElementById('icono-hamburguesa');
+
+    menu.addEventListener('click', function(){
+        if(movimiento.className === 'container-nav'){
+            movimiento.className += ' container-nav-2';
+            icono.className += ' fa-x';
+        }else{
+            movimiento.className = 'container-nav';
+            icono.className = ' fa-solid fa-bars';
+        }
+    });
+
+    </script>
+</body>
+</html>

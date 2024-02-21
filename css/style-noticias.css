@@ -1,0 +1,184 @@
+.hero{
+    background-image: url(../img/noticias.jpg);
+    width: 100%;
+    height: 690px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+
+.container-card{
+    background-image: linear-gradient(#5170FD, #60ABFB);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+}
+
+
+.card{
+    position: relative;
+    width: 400px;
+    height: 410px;
+    margin: 10px 2px 10px 50px;
+}
+
+
+.cara{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .6s;
+}
+
+.frente{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .frente img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ .frente h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    font-size: 20px;
+    line-height: 48px;
+    color: white;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+.card .atras{
+    transform: perspective(600px) rotateY(180deg);
+    background-image: linear-gradient(#5170FD, #60ABFB);
+    padding: 1px;
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.atras h3{
+    font-size: 25px;
+    margin-top: 2px;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+.atras p{
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin: 15px;
+}
+
+.card .atras .link{
+    border-top: solid 1px white;
+    height: 40px;
+    line-height: 30px;
+}
+
+.card .atras .link a{
+color: white;
+font-weight: 600;
+}
+
+.card:hover .frente{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .atras{
+    transform: perspective(600px) rotateY(360deg);
+}
+.title-noticias{
+    color: white;
+    padding: 1% 0% 1% 0%;
+    text-align: center;
+    font-size: 45px;
+    background-color:#5170FD;
+}
+
+@media only screen and (max-width: 768px){
+    .logo{
+        width: 100%;
+        position: relative;
+        z-index: 999;
+        background-color: #60ABFB;
+    }
+
+    .logo-mobile{
+        width: 100%;
+        position: relative;
+        z-index: 999;
+        background-color: #000;
+    }
+
+    .menu-nav{
+        width: 100%;
+    }
+    .social-media{
+        width: 100%;
+    }
+    .menu{
+        display: block;
+    }
+    .menu li{
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .hero{
+        height: 250px;
+        background-position: left center;
+    }
+    .icono-menu{
+        display: block;
+        color: white;
+        font-size: 20px;
+        padding: 8px 10px 8px 10px;
+    }
+    .container-nav{
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: -200px;
+        background-color: #60ABFB;
+    }
+    footer{
+        flex-wrap: wrap;
+    }
+
+    .container-nav-2{
+        top: 96px;
+    }
+
+    .container-card {
+        width: 100%;
+        max-width: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card{
+        width: calc(100% - 40px);
+        max-width: 300px;
+        height: 600px;
+        margin: 20px; 
+    }
+
+}
